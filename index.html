@@ -1,337 +1,341 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zariya Fashion | Ladies Online Store</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zariya Fashion | Ladies Online Store</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;color:#30242a;background:#fff}
+html{scroll-behavior:smooth}
 
-    body {
-      font-family: Arial, sans-serif;
-      color: #2d2d2d;
-      background: #fffaf8;
-    }
+.demo{
+background:#351b29;color:#fff;text-align:center;
+padding:9px;font-size:13px;letter-spacing:.5px
+}
 
-    .demo-bar {
-      background: #2d1825;
-      color: white;
-      text-align: center;
-      padding: 8px;
-      font-size: 13px;
-    }
+header{
+display:flex;justify-content:space-between;align-items:center;
+padding:20px 7%;background:#fff;position:sticky;top:0;z-index:10;
+box-shadow:0 2px 12px rgba(0,0,0,.05)
+}
 
-    header {
-      background: white;
-      padding: 18px 7%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
+.logo{
+font-family:Georgia,serif;font-size:29px;
+font-weight:bold;color:#8c345d;letter-spacing:2px
+}
 
-    .logo {
-      font-size: 27px;
-      font-weight: bold;
-      color: #8b365d;
-    }
+nav a{
+text-decoration:none;color:#333;margin-left:24px;font-size:14px
+}
 
-    nav a {
-      text-decoration: none;
-      color: #333;
-      margin: 0 12px;
-      font-size: 14px;
-    }
+.hero{
+min-height:610px;
+display:grid;grid-template-columns:1fr 1fr;
+background:#f8eeec
+}
 
-    .hero {
-      min-height: 520px;
-      display: flex;
-      align-items: center;
-      padding: 70px 8%;
-      background: linear-gradient(120deg, #f7e7e5, #fdf7f1);
-    }
+.hero-text{
+display:flex;flex-direction:column;justify-content:center;
+padding:70px 12%
+}
 
-    .hero-content {
-      max-width: 620px;
-    }
+.hero-text span{
+color:#9b3c68;font-weight:bold;
+letter-spacing:3px;font-size:13px
+}
 
-    .hero small {
-      color: #8b365d;
-      letter-spacing: 2px;
-      font-weight: bold;
-    }
+.hero h1{
+font-family:Georgia,serif;font-size:58px;
+line-height:1.08;margin:18px 0;color:#351b29
+}
 
-    .hero h1 {
-      font-family: Georgia, serif;
-      font-size: 58px;
-      margin: 18px 0;
-      color: #341c2b;
-    }
+.hero p{
+font-size:17px;line-height:1.7;color:#65585e;
+margin-bottom:28px;max-width:520px
+}
 
-    .hero p {
-      font-size: 18px;
-      line-height: 1.7;
-      margin-bottom: 30px;
-      color: #666;
-    }
+.btn{
+display:inline-block;background:#8c345d;color:white;
+padding:14px 25px;text-decoration:none;border-radius:3px;
+width:max-content
+}
 
-    .btn {
-      display: inline-block;
-      background: #8b365d;
-      color: white;
-      padding: 14px 25px;
-      text-decoration: none;
-      border-radius: 4px;
-      margin-right: 8px;
-    }
+.hero-image{
+background:
+linear-gradient(rgba(0,0,0,.05),rgba(0,0,0,.05)),
+url('https://images.unsplash.com/photo-1583391733956-6c78276477e2?auto=format&fit=crop&w=1000&q=85');
+background-size:cover;background-position:center
+}
 
-    .categories,
-    .products {
-      padding: 65px 7%;
-      text-align: center;
-    }
+.section{
+padding:75px 7%
+}
 
-    .section-title {
-      font-family: Georgia, serif;
-      font-size: 34px;
-      color: #341c2b;
-      margin-bottom: 10px;
-    }
+.title{
+text-align:center;font-family:Georgia,serif;
+font-size:38px;color:#351b29;margin-bottom:10px
+}
 
-    .subtitle {
-      color: #777;
-      margin-bottom: 35px;
-    }
+.sub{
+text-align:center;color:#777;margin-bottom:38px
+}
 
-    .category-grid,
-    .product-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-    }
+.categories{
+display:grid;grid-template-columns:repeat(3,1fr);gap:22px
+}
 
-    .category-card {
-      background: #f3dfdf;
-      padding: 55px 20px;
-      border-radius: 8px;
-    }
+.category{
+height:370px;position:relative;overflow:hidden;border-radius:5px
+}
 
-    .category-card h3 {
-      font-family: Georgia, serif;
-      font-size: 24px;
-      margin-bottom: 8px;
-    }
+.category img{
+width:100%;height:100%;object-fit:cover;
+transition:.4s
+}
 
-    .product-card {
-      background: white;
-      border: 1px solid #eee;
-      border-radius: 8px;
-      overflow: hidden;
-      text-align: left;
-    }
+.category:hover img{transform:scale(1.05)}
 
-    .product-image {
-      height: 260px;
-      background: linear-gradient(135deg, #eed8d6, #f8eeee);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 60px;
-    }
+.category-name{
+position:absolute;bottom:0;left:0;right:0;
+padding:22px;color:white;font-family:Georgia,serif;
+font-size:25px;
+background:linear-gradient(transparent,rgba(0,0,0,.75))
+}
 
-    .product-info {
-      padding: 20px;
-    }
+.products-bg{background:#fff9f7}
 
-    .product-info h3 {
-      margin-bottom: 8px;
-    }
+.products{
+display:grid;grid-template-columns:repeat(4,1fr);gap:20px
+}
 
-    .price {
-      color: #8b365d;
-      font-weight: bold;
-      font-size: 18px;
-      margin-bottom: 15px;
-    }
+.product{
+background:#fff;border:1px solid #eee;
+overflow:hidden;border-radius:5px
+}
 
-    .whatsapp {
-      display: block;
-      text-align: center;
-      background: #248c54;
-      color: white;
-      text-decoration: none;
-      padding: 12px;
-      border-radius: 4px;
-    }
+.product img{
+width:100%;height:340px;object-fit:cover
+}
 
-    .about {
-      background: #341c2b;
-      color: white;
-      padding: 70px 10%;
-      text-align: center;
-    }
+.info{padding:18px}
 
-    .about h2 {
-      font-family: Georgia, serif;
-      font-size: 35px;
-      margin-bottom: 18px;
-    }
+.info h3{
+font-family:Georgia,serif;font-size:20px;margin-bottom:8px
+}
 
-    .about p {
-      max-width: 700px;
-      margin: auto;
-      line-height: 1.8;
-      color: #eadfe5;
-    }
+.price{
+color:#8c345d;font-size:18px;font-weight:bold;margin-bottom:14px
+}
 
-    footer {
-      padding: 25px;
-      text-align: center;
-      background: #24141e;
-      color: #ddd;
-      font-size: 13px;
-    }
+.whatsapp{
+display:block;background:#218b50;color:white;
+text-align:center;text-decoration:none;
+padding:11px;border-radius:3px;font-size:14px
+}
 
-    @media (max-width: 768px) {
-      nav {
-        width: 100%;
-        margin-top: 15px;
-      }
+.banner{
+margin:0 7% 75px;
+background:#351b29;color:white;
+padding:55px;text-align:center;border-radius:5px
+}
 
-      nav a {
-        display: inline-block;
-        margin: 6px;
-      }
+.banner h2{
+font-family:Georgia,serif;font-size:36px;margin-bottom:12px
+}
 
-      .hero h1 {
-        font-size: 40px;
-      }
+.banner p{
+color:#eadfe4;max-width:650px;margin:0 auto 25px;line-height:1.7
+}
 
-      .category-grid,
-      .product-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+.features{
+display:grid;grid-template-columns:repeat(3,1fr);
+gap:25px;text-align:center;padding:60px 7%;
+border-top:1px solid #eee
+}
+
+.feature h3{margin:12px 0 7px;color:#351b29}
+.feature p{color:#777;font-size:14px}
+
+footer{
+background:#21131a;color:#ddd;
+padding:35px 7%;text-align:center;line-height:1.8
+}
+
+footer strong{color:#fff}
+
+@media(max-width:850px){
+nav{display:none}
+.hero{grid-template-columns:1fr}
+.hero-text{min-height:470px}
+.hero-image{height:450px}
+.hero h1{font-size:44px}
+.categories{grid-template-columns:1fr}
+.products{grid-template-columns:repeat(2,1fr)}
+}
+
+@media(max-width:520px){
+.products{grid-template-columns:1fr}
+.hero h1{font-size:38px}
+.hero-image{height:380px}
+.features{grid-template-columns:1fr}
+}
+</style>
 </head>
 
 <body>
 
-  <div class="demo-bar">
-    LIVE DEMO STORE • Designed by US Web Design
-  </div>
+<div class="demo">
+LIVE DEMO ONLINE STORE • Designed by US Web Design
+</div>
 
-  <header>
-    <div class="logo">ZARIYA</div>
+<header>
+<div class="logo">ZARIYA</div>
 
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#categories">Shop</a>
-      <a href="#products">New Arrivals</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+<nav>
+<a href="#home">Home</a>
+<a href="#categories">Collections</a>
+<a href="#products">New Arrivals</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
 
-  <section class="hero" id="home">
-    <div class="hero-content">
-      <small>NEW COLLECTION</small>
+<section class="hero" id="home">
 
-      <h1>Elegance Made for You.</h1>
+<div class="hero-text">
+<span>NEW SEASON COLLECTION</span>
 
-      <p>
-        Discover beautiful women's fashion designed for everyday
-        elegance and special occasions.
-      </p>
+<h1>Wear Your<br>Own Story.</h1>
 
-      <a class="btn" href="#products">Shop Collection</a>
-    </div>
-  </section>
+<p>
+Timeless styles, beautiful fabrics and effortless elegance.
+Discover our latest women's collection for every occasion.
+</p>
 
-  <section class="categories" id="categories">
+<a href="#products" class="btn">Explore Collection</a>
+</div>
 
-    <h2 class="section-title">Shop by Category</h2>
-    <p class="subtitle">Find something beautiful for every occasion.</p>
+<div class="hero-image"></div>
 
-    <div class="category-grid">
+</section>
 
-      <div class="category-card">
-        <h3>Sarees</h3>
-        <p>Elegant styles for celebrations and everyday wear.</p>
-      </div>
+<section class="section" id="categories">
 
-      <div class="category-card">
-        <h3>Kurtis</h3>
-        <p>Comfortable, modern and beautifully designed.</p>
-      </div>
+<h2 class="title">Shop by Collection</h2>
+<p class="sub">Find your perfect look.</p>
 
-      <div class="category-card">
-        <h3>Dress Materials</h3>
-        <p>Create a look that's uniquely yours.</p>
-      </div>
+<div class="categories">
 
-    </div>
-  </section>
+<div class="category">
+<img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=700&q=80" alt="Saree Collection">
+<div class="category-name">Sarees</div>
+</div>
 
-  <section class="products" id="products">
+<div class="category">
+<img src="https://images.unsplash.com/photo-1583391733975-d8cddf52c7b3?auto=format&fit=crop&w=700&q=80" alt="Kurti Collection">
+<div class="category-name">Kurtis</div>
+</div>
 
-    <h2 class="section-title">New Arrivals</h2>
-    <p class="subtitle">Our latest collection.</p>
+<div class="category">
+<img src="https://images.unsplash.com/photo-1597983073512-90bd150e19f6?auto=format&fit=crop&w=700&q=80" alt="Festive Collection">
+<div class="category-name">Festive Wear</div>
+</div>
 
-    <div class="product-grid">
+</div>
+</section>
 
-      <div class="product-card">
-        <div class="product-image">👗</div>
+<section class="section products-bg" id="products">
 
-        <div class="product-info">
-          <h3>Elegant Kurti Set</h3>
-          <p class="price">₹1,499</p>
-          <a class="whatsapp" href="#">Order on WhatsApp</a>
-        </div>
-      </div>
+<h2 class="title">New Arrivals</h2>
+<p class="sub">Fresh styles selected for you.</p>
 
-      <div class="product-card">
-        <div class="product-image">✨</div>
+<div class="products">
 
-        <div class="product-info">
-          <h3>Festive Saree</h3>
-          <p class="price">₹2,299</p>
-          <a class="whatsapp" href="#">Order on WhatsApp</a>
-        </div>
-      </div>
+<div class="product">
+<img src="https://images.unsplash.com/photo-1610030469668-93569e5e4d80?auto=format&fit=crop&w=600&q=80" alt="Designer Saree">
+<div class="info">
+<h3>Designer Saree</h3>
+<div class="price">₹2,499</div>
+<a class="whatsapp" href="#">Order on WhatsApp</a>
+</div>
+</div>
 
-      <div class="product-card">
-        <div class="product-image">🌸</div>
+<div class="product">
+<img src="https://images.unsplash.com/photo-1583391733956-6c78276477e2?auto=format&fit=crop&w=600&q=80" alt="Elegant Kurti">
+<div class="info">
+<h3>Elegant Kurti Set</h3>
+<div class="price">₹1,499</div>
+<a class="whatsapp" href="#">Order on WhatsApp</a>
+</div>
+</div>
 
-        <div class="product-info">
-          <h3>Premium Dress Material</h3>
-          <p class="price">₹1,199</p>
-          <a class="whatsapp" href="#">Order on WhatsApp</a>
-        </div>
-      </div>
+<div class="product">
+<img src="https://images.unsplash.com/photo-1610189012906-4c0aa9b9781e?auto=format&fit=crop&w=600&q=80" alt="Festive Wear">
+<div class="info">
+<h3>Festive Collection</h3>
+<div class="price">₹2,199</div>
+<a class="whatsapp" href="#">Order on WhatsApp</a>
+</div>
+</div>
 
-    </div>
-  </section>
+<div class="product">
+<img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=600&q=80" alt="Premium Saree">
+<div class="info">
+<h3>Premium Saree</h3>
+<div class="price">₹2,899</div>
+<a class="whatsapp" href="#">Order on WhatsApp</a>
+</div>
+</div>
 
-  <section class="about" id="about">
-    <h2>Style That Feels Like You</h2>
+</div>
+</section>
 
-    <p>
-      Zariya Fashion is a demonstration online store created to
-      showcase a modern shopping experience for fashion businesses.
-      Products, branding, colors and ordering options can be fully
-      customized for each business.
-    </p>
-  </section>
+<section class="banner" id="about">
 
-  <footer id="contact">
-    Zariya Fashion • Demo Online Store • Designed by US Web Design
-  </footer>
+<h2>Your Store. Your Style.</h2>
+
+<p>
+This is a live demonstration online store by US Web Design.
+Your business website can be customized with your own brand name,
+logo, products, prices, colors, WhatsApp number and collections.
+</p>
+
+<a href="#products" class="btn">View Collection</a>
+
+</section>
+
+<section class="features">
+
+<div class="feature">
+<div>📱</div>
+<h3>Mobile Friendly</h3>
+<p>Designed beautifully for phones, tablets and computers.</p>
+</div>
+
+<div class="feature">
+<div>💬</div>
+<h3>WhatsApp Orders</h3>
+<p>Customers can contact your business directly to place orders.</p>
+</div>
+
+<div class="feature">
+<div>✨</div>
+<h3>Fully Customizable</h3>
+<p>Your products, branding, prices and content can be customized.</p>
+</div>
+
+</section>
+
+<footer id="contact">
+
+<strong>ZARIYA FASHION</strong><br>
+Ladies Fashion Online Store — Demo Project<br><br>
+
+Designed by <strong>US Web Design</strong>
+
+</footer>
 
 </body>
 </html>
