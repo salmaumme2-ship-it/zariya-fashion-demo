@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zariya Fashion | Ladies Online Store</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: #2d2d2d;
+      background: #fffaf8;
+    }
+
+    .demo-bar {
+      background: #2d1825;
+      color: white;
+      text-align: center;
+      padding: 8px;
+      font-size: 13px;
+    }
+
+    header {
+      background: white;
+      padding: 18px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 27px;
+      font-weight: bold;
+      color: #8b365d;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      margin: 0 12px;
+      font-size: 14px;
+    }
+
+    .hero {
+      min-height: 520px;
+      display: flex;
+      align-items: center;
+      padding: 70px 8%;
+      background: linear-gradient(120deg, #f7e7e5, #fdf7f1);
+    }
+
+    .hero-content {
+      max-width: 620px;
+    }
+
+    .hero small {
+      color: #8b365d;
+      letter-spacing: 2px;
+      font-weight: bold;
+    }
+
+    .hero h1 {
+      font-family: Georgia, serif;
+      font-size: 58px;
+      margin: 18px 0;
+      color: #341c2b;
+    }
+
+    .hero p {
+      font-size: 18px;
+      line-height: 1.7;
+      margin-bottom: 30px;
+      color: #666;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #8b365d;
+      color: white;
+      padding: 14px 25px;
+      text-decoration: none;
+      border-radius: 4px;
+      margin-right: 8px;
+    }
+
+    .categories,
+    .products {
+      padding: 65px 7%;
+      text-align: center;
+    }
+
+    .section-title {
+      font-family: Georgia, serif;
+      font-size: 34px;
+      color: #341c2b;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      color: #777;
+      margin-bottom: 35px;
+    }
+
+    .category-grid,
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .category-card {
+      background: #f3dfdf;
+      padding: 55px 20px;
+      border-radius: 8px;
+    }
+
+    .category-card h3 {
+      font-family: Georgia, serif;
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+
+    .product-card {
+      background: white;
+      border: 1px solid #eee;
+      border-radius: 8px;
+      overflow: hidden;
+      text-align: left;
+    }
+
+    .product-image {
+      height: 260px;
+      background: linear-gradient(135deg, #eed8d6, #f8eeee);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 60px;
+    }
+
+    .product-info {
+      padding: 20px;
+    }
+
+    .product-info h3 {
+      margin-bottom: 8px;
+    }
+
+    .price {
+      color: #8b365d;
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+
+    .whatsapp {
+      display: block;
+      text-align: center;
+      background: #248c54;
+      color: white;
+      text-decoration: none;
+      padding: 12px;
+      border-radius: 4px;
+    }
+
+    .about {
+      background: #341c2b;
+      color: white;
+      padding: 70px 10%;
+      text-align: center;
+    }
+
+    .about h2 {
+      font-family: Georgia, serif;
+      font-size: 35px;
+      margin-bottom: 18px;
+    }
+
+    .about p {
+      max-width: 700px;
+      margin: auto;
+      line-height: 1.8;
+      color: #eadfe5;
+    }
+
+    footer {
+      padding: 25px;
+      text-align: center;
+      background: #24141e;
+      color: #ddd;
+      font-size: 13px;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        width: 100%;
+        margin-top: 15px;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 6px;
+      }
+
+      .hero h1 {
+        font-size: 40px;
+      }
+
+      .category-grid,
+      .product-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="demo-bar">
+    LIVE DEMO STORE • Designed by US Web Design
+  </div>
+
+  <header>
+    <div class="logo">ZARIYA</div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#categories">Shop</a>
+      <a href="#products">New Arrivals</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <small>NEW COLLECTION</small>
+
+      <h1>Elegance Made for You.</h1>
+
+      <p>
+        Discover beautiful women's fashion designed for everyday
+        elegance and special occasions.
+      </p>
+
+      <a class="btn" href="#products">Shop Collection</a>
+    </div>
+  </section>
+
+  <section class="categories" id="categories">
+
+    <h2 class="section-title">Shop by Category</h2>
+    <p class="subtitle">Find something beautiful for every occasion.</p>
+
+    <div class="category-grid">
+
+      <div class="category-card">
+        <h3>Sarees</h3>
+        <p>Elegant styles for celebrations and everyday wear.</p>
+      </div>
+
+      <div class="category-card">
+        <h3>Kurtis</h3>
+        <p>Comfortable, modern and beautifully designed.</p>
+      </div>
+
+      <div class="category-card">
+        <h3>Dress Materials</h3>
+        <p>Create a look that's uniquely yours.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="products" id="products">
+
+    <h2 class="section-title">New Arrivals</h2>
+    <p class="subtitle">Our latest collection.</p>
+
+    <div class="product-grid">
+
+      <div class="product-card">
+        <div class="product-image">👗</div>
+
+        <div class="product-info">
+          <h3>Elegant Kurti Set</h3>
+          <p class="price">₹1,499</p>
+          <a class="whatsapp" href="#">Order on WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">✨</div>
+
+        <div class="product-info">
+          <h3>Festive Saree</h3>
+          <p class="price">₹2,299</p>
+          <a class="whatsapp" href="#">Order on WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">🌸</div>
+
+        <div class="product-info">
+          <h3>Premium Dress Material</h3>
+          <p class="price">₹1,199</p>
+          <a class="whatsapp" href="#">Order on WhatsApp</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <h2>Style That Feels Like You</h2>
+
+    <p>
+      Zariya Fashion is a demonstration online store created to
+      showcase a modern shopping experience for fashion businesses.
+      Products, branding, colors and ordering options can be fully
+      customized for each business.
+    </p>
+  </section>
+
+  <footer id="contact">
+    Zariya Fashion • Demo Online Store • Designed by US Web Design
+  </footer>
+
+</body>
+</html>
